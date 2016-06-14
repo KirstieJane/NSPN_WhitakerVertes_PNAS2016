@@ -1,0 +1,32 @@
+\begin{longtable}{llll}
+\caption*{Cohort comparison: Correlations between CT, MT with age} \\
+\toprule
+{} &                          \textbf{Discovery} &                   \textbf{Validation} &                     \textbf{Complete} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{Global CT vs Age}}         &        \textit{r\textsuperscript{2}} = 0.10 &  \textit{r\textsuperscript{2}} = 0.19 &  \textit{r\textsuperscript{2}} = 0.16 \\
+                                                   &                         \textit{P} $<$ .001 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &              $\beta$ = -11.8$\times10^{-3}$ &        $\beta$ = -17.5$\times10^{-3}$ &        $\beta$ = -15.9$\times10^{-3}$ \\
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{Global MT vs Age}}         &        \textit{r\textsuperscript{2}} = 0.13 &  \textit{r\textsuperscript{2}} = 0.12 &  \textit{r\textsuperscript{2}} = 0.12 \\
+                                                   &                         \textit{P} $<$ .001 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &               $\beta$ = 4.37$\times10^{-3}$ &         $\beta$ = 3.59$\times10^{-3}$ &         $\beta$ = 3.79$\times10^{-3}$ \\
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{MT at 14 vs CT at 14}}     &        \textit{r\textsuperscript{2}} = 0.49 &  \textit{r\textsuperscript{2}} = 0.48 &  \textit{r\textsuperscript{2}} = 0.49 \\
+                                                   &                         \textit{P} $<$ .001 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &                            $\beta$ = -0.132 &                      $\beta$ = -0.126 &                      $\beta$ = -0.128 \\
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{$\Delta$MT vs $\Delta$CT}} &        \textit{r\textsuperscript{2}} = 0.14 &  \textit{r\textsuperscript{2}} = 0.21 &  \textit{r\textsuperscript{2}} = 0.20 \\
+                                                   &                         \textit{P} $<$ .001 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &              $\beta$ = -89.0$\times10^{-3}$ &       $\beta$ = -124.4$\times10^{-3}$ &       $\beta$ = -123.7$\times10^{-3}$ \\
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{$\Delta$CT vs CT at 14}}   &  \textit{{r\textsuperscript{{2}}}} $<$ 0.01 &  \textit{r\textsuperscript{2}} = 0.15 &  \textit{r\textsuperscript{2}} = 0.05 \\
+                                                   &                           \textit{P} = .476 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &               $\beta$ = 1.12$\times10^{-3}$ &        $\beta$ = -7.17$\times10^{-3}$ &        $\beta$ = -4.03$\times10^{-3}$ \\
+\rule{0pt}{4ex} \multirow{3}{*}{\textbf{$\Delta$MT vs MT at 14}}   &        \textit{r\textsuperscript{2}} = 0.15 &  \textit{r\textsuperscript{2}} = 0.33 &  \textit{r\textsuperscript{2}} = 0.29 \\
+                                                   &                         \textit{P} $<$ .001 &                   \textit{P} $<$ .001 &                   \textit{P} $<$ .001 \\
+                                                   &              $\beta$ = -14.7$\times10^{-3}$ &        $\beta$ = -15.8$\times10^{-3}$ &        $\beta$ = -14.7$\times10^{-3}$ \\
+\end{longtable}

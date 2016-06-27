@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Figures
-excerpt: "Figures from "NSPN Manuscript 'Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome'."
+title: Theme set up
+excerpt: "X"
 modified: 2016-06-27
 image:
   feature: so-simple-sample-image-6.jpg

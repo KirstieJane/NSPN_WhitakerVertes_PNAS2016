@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title: Adolescent Consolidation of\nHuman Connectome Hubs
+title: Adolescent Consolidation of Human Connectome Hubs
 locale: en_US
 description: Data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome".
 logo: site-logo.png

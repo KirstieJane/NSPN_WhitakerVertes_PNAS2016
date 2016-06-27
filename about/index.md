@@ -9,4 +9,4 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-You can find out more about the lead authors at their personal websites: [Kirstie Whitaker](www.kirstiewhitaker.com) & [Petra Vertes](http://pv226.user.srcf.net/?p=7).
+You can find out more about the lead authors at their personal websites: [Kirstie Whitaker](http://www.kirstiewhitaker.com) & [Petra Vertes](http://pv226.user.srcf.net/?p=7).

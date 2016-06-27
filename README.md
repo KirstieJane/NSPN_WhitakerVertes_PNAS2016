@@ -1,3 +1,7 @@
+# NSPN_WhitakerVertes_PNAS2016
+
+This repository is a mirror of the [figshare repository](https://figshare.com/projects/NSPN_Adolescent_consolidation_of_human_connectome_hubs/4710) that contains all the data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome".
+
 ### tl;dr
 
 If you want to get started immediately then just clone the repo and explore the [NSPN_CorticalMyelination_AnalysisWrapper.py](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/blob/master/NSPN_CorticalMyelination_AnalysisWrapper.py) file.

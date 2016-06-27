@@ -10,3 +10,4 @@ image:
 ---
 
 # This is where figure 1 would go.
+![](https://raw.githubusercontent.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/master/SUPPLEMENTAL_FILES/GO_Complete_PLS2_neg.png)

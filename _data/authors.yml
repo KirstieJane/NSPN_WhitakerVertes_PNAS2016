@@ -1,20 +1,11 @@
 # Authors
 
-billy_rick:
-  name: Billy Rick
-  web: http://thewhip.com
-  email: billy@rick.com
-  bio: "What do you want, jewels? I am a very extravagant man."
-  avatar: bio-photo-2.jpg
-  twitter: extravagantman
+kirstiejane:
+  name: Kirstie Whitaker
+  web: www.kirstiewhitaker.com
+  email: kw401@cam.ac.uk
+  bio: "Postdoc in the Department of Psychiatry at the University of Cambridge. Interested in Adolescent brain development and the emergence of mental health disorders. Passionate advocate for open science and supporting under-represented groups in STEMM"
+  avatar: kirstie-whitaker-photo.png
+  twitter: kirstie_j
   google:
-    plus: BillyRick
-
-cornelius_fiddlebone:
-  name: Cornelius Fiddlebone
-  email: cornelius@thewhip.com
-  bio: "I ordered what?"
-  avatar: bio-photo.jpg
-  twitter: rhymeswithsackit
-  google:
-    plus: CorneliusFiddlebone
+    plus:

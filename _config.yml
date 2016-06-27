@@ -1,10 +1,10 @@
 # Site wide configuration
 
-title: So Simple Theme
+title: Adolescent Consolidation of Human Connectome Hubs
 locale: en_US
-description: A simple and clean responsive Jekyll theme for words and photos.
+description: Data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome".
 logo: site-logo.png
-url: https://mmistakes.github.io/so-simple-theme
+url: https://KirstieJane.github.io/NSPN_WhitakerVertes_PNAS2016
 
 # Jekyll configuration
 
@@ -37,23 +37,23 @@ comments: true
 # Site owner
 owner:
   name: Kirstie Whitaker
-  avatar: michael-rose-photo.jpg
-  email: michael@mademistakes.com
+  avatar: kirstie-whitaker-photo.jpg
+  email: kw401@cam.ac.uk
   disqus-shortname: sosimpletheme
-  twitter: mmistakes
-  facebook: michaelrose
-  github: mmistakes
+  twitter: kirstie_j
+  facebook:
+  github: KirstieJane
   stackexchange:
   linkedin:
-  instagram: mmistakes
+  instagram:
   flickr:
-  tumblr: mademistakes
+  tumblr:
   pinterest:
   weibo:
   google:
-    plus: MichaelRoseDesign
-    analytics: UA-2011187-2
-    verify: UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y
-    ad-client: ca-pub-7328585512091257
-    ad-slot: 7855747535
-  bing-verify: D81F4C18A6CB3018F64D7C827D953DFD
+    plus:
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

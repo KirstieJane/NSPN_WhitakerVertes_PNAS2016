@@ -1,28 +1,21 @@
-# So Simple Theme
+### tl;dr
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the followup to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes/) -- by designer slash illustrator [Michael Rose](http://mademistakes.com).
+If you want to get started immediately then just clone the repo and explore the [NSPN_CorticalMyelination_AnalysisWrapper.py](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/blob/master/NSPN_CorticalMyelination_AnalysisWrapper.py) file.
 
-## Notable features:
 
-* Compatible with Jekyll 3 and GitHub Pages.
-* Responsive templates. Looks good on mobile, tablet, and desktop devices.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations.
-* Optional large feature images for posts and pages.
-* [Custom 404 page](http://mmistakes.github.io/so-simple-theme/404.html) to get you started.
-* Basic [search capabilities](https://github.com/mathaywarduk/jekyll-search)
-* Support for Disqus Comments
+### What's in this repo
 
-![screenshot of So Simple Theme](http://mmistakes.github.io/so-simple-theme/images/so-simple-theme-preview.jpg)
+This repository contains all the data, analysis code and results (including figures and tables) from the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome". A write up of all the different files and naming structures can be found at the wiki page on [file descriptions](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/wiki/File-descriptions).
 
-See a [live version of So Simple](http://mmistakes.github.io/so-simple-theme/) hosted on GitHub.
+### Support
 
----
+First check out the wiki to see if there's any documentation that might be helpful.
 
-## Getting Started
+The next stop are the [current issues](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/issues) just in case someone has already asked your question already.
 
-So Simple takes advantage of Sass and data files to make customizing easier and requires Jekyll 3.x.
+If they haven't please [open a new issue](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/issues/new) and provide as much information as you can. [Kirstie](https://github.com/KirstieJane) will get back to you within a couple of days.
 
-To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/so-simple-theme/theme-setup/) for more information.
+### FAQs
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mmistakes/so-simple-theme/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+#### Why figshare *and* GitHub?
+The repository was created upon acceptance of the paper by PNAS by downloading the project files from [figshare](https://figshare.com/projects/NSPN_Adolescent_consolidation_of_human_connectome_hubs/4710). The Figshare project ensures that our data and code will be stored in perpetuity, but the goal of this GitHub repository is to make it easy for you to both access the files and to ask for help with the process. [Wiki documentation](https://github.com/KirstieJane/NSPN_WhitakerVertes_PNAS2016/wiki) will be built as necessary in response to your questions.

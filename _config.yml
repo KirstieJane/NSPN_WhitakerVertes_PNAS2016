@@ -1,11 +1,10 @@
 # Site wide configuration
 
-title: Adolescent consolidation of human connectome hubs
+title: So Simple Theme
 locale: en_US
-description: Data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome".
-logo: Whitaker_KirstieJane.png
-search: true
-url: http://localhost:4000
+description: A simple and clean responsive Jekyll theme for words and photos.
+logo: site-logo.png
+url: https://mmistakes.github.io/so-simple-theme
 
 # Jekyll configuration
 
@@ -26,34 +25,35 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..2
-  enable_coderay: false
+  use_coderay: false
 
 mathjax: true
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
 
+comments: true
 
 # Site owner
 owner:
   name: Kirstie Whitaker
-  avatar: bio-photo.jpg
-  email: kw401@cam.ac.uk
-  disqus-shortname:
-  twitter: kirstie_j
-  facebook: #username
-  github: KirstieJane
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
-  weibo: #userid
+  avatar: michael-rose-photo.jpg
+  email: michael@mademistakes.com
+  disqus-shortname: sosimpletheme
+  twitter: mmistakes
+  facebook: michaelrose
+  github: mmistakes
+  stackexchange:
+  linkedin:
+  instagram: mmistakes
+  flickr:
+  tumblr: mademistakes
+  pinterest:
+  weibo:
   google:
-    plus: #username
-    analytics:
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
+    plus: MichaelRoseDesign
+    analytics: UA-2011187-2
+    verify: UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y
+    ad-client: ca-pub-7328585512091257
+    ad-slot: 7855747535
+  bing-verify: D81F4C18A6CB3018F64D7C827D953DFD

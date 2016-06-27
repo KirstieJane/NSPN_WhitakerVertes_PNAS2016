@@ -16,8 +16,10 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-feed (0.5.1)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
     jekyll-sitemap (0.10.0)
@@ -48,7 +50,9 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-feed
   jekyll-gist
+  jekyll-paginate
   jekyll-sitemap
 
 BUNDLED WITH

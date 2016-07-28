@@ -1,6 +1,6 @@
 # NSPN_WhitakerVertes_PNAS2016
 
-This repository is a mirror of the [figshare repository](https://figshare.com/projects/NSPN_Adolescent_consolidation_of_human_connectome_hubs/4710) that contains all the data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome".
+This repository is a mirror of the [figshare repository](https://figshare.com/projects/NSPN_Adolescent_consolidation_of_human_connectome_hubs/4710) that contains all the data and analysis code to reproduce the NSPN Manuscript "Adolescence is associated with genomically patterned consolidation of the hubs of the human brain connectome" published in PNAS July 25th 2016, [doi: 10.1073/pnas.1601745113](http://dx.doi.org/10.1073/pnas.1601745113).
 
 ### tl;dr
 

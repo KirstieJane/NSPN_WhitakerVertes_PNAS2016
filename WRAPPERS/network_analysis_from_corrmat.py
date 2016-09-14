@@ -111,7 +111,7 @@ def read_in_data(corr_mat_file, names_file, centroids_file, names_308_style):
     return M, names, centroids
 
 
-def write_out_nodal_measures(nodal_dict, output_dir, corr_mat_file, cost):
+def write_out_nodal_measures(nodal_dict, centroids, output_dir, corr_mat_file, cost):
     '''
     Write the nodal dictionary into a pandas data frame and then
     save this data frame into a csv file where columns are the nodal measures
@@ -119,6 +119,11 @@ def write_out_nodal_measures(nodal_dict, output_dir, corr_mat_file, cost):
     '''
     # Put the nodal dict into a pandas dataframe
     df = pd.DataFrame(nodal_dict)
+
+    # Add in the centroids
+    df['x'] = centroids[:, 0]
+    df['y'] = centroids[:, 1]
+    df['z'] = centroids[:, 2]
 
     # Make the output directory if it doesn't exist already
     if not os.path.isdir(output_dir):
@@ -197,8 +202,8 @@ def network_analysis_from_corrmat(corr_mat_file,
                                                  names_308_style=names_308_style)
 
     # Save your nodal measures
-    write_out_nodal_measures(nodal_dict, output_dir, corr_mat_file, cost)
-    
+    write_out_nodal_measures(nodal_dict, centroids, output_dir, corr_mat_file, cost)
+
     # Get the global measures
     # (note that this takes a bit of time because you're generating random
     # graphs)

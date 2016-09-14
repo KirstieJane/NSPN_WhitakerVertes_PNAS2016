@@ -70,6 +70,13 @@ def setup_argparser():
                                                  ('  Default: 10.0')),
                             default=10.0)
 
+    parser.add_argument('-n', '--n_rand',
+                            type=int,
+                            metavar='n_rand',
+                            help=textwrap.dedent(('Number of random graphs to generate to compare with real network.\n')+
+                                                 ('  Default: 1000')),
+                            default=1000)
+
     parser.add_argument('--names_308_style',
                             action='store_true',
                             help=textwrap.dedent(('Include this flag if your names are in the NSPN 308\n')+
@@ -128,11 +135,38 @@ def write_out_nodal_measures(nodal_dict, output_dir, corr_mat_file, cost):
     df.to_csv(output_f_name, columns=new_col_list)
 
 
+def write_out_global_measures(global_dict, output_dir, corr_mat_file, cost):
+    '''
+    Write the global dictionary into a pandas data frame and then
+    save this data frame into a csv file where columns are the global measures
+    and the rows are each of the random networks. Note that this means the
+    non-randomised graph measures are the same in every row.
+
+    (If there's a better way to write this out then I'm totally down!)
+    '''
+    # Put the global dict into a pandas dataframe
+    df = pd.DataFrame(global_dict)
+
+    # Make the output directory if it doesn't exist already
+    if not os.path.isdir(output_dir):
+        os.path.makedirs(output_dir)
+
+    # Figure out the output file name
+    basename_corr_mat_file = os.path.basename(corr_mat_file).strip('.txt')
+    output_f_name = os.path.join(output_dir,
+                                    'GlobalMeasures_{}_COST{:03.0f}.csv'.format(basename_corr_mat_file,
+                                                                          cost))
+
+    # Write the data frame out (with the name column first)
+    df.to_csv(output_f_name)
+
+
 def network_analysis_from_corrmat(corr_mat_file,
                                   names_file,
                                   centroids_file,
                                   output_dir,
                                   cost=10,
+                                  n_rand=1000,
                                   names_308_style=False):
     '''
     This is the big function!
@@ -164,9 +198,19 @@ def network_analysis_from_corrmat(corr_mat_file,
 
     # Save your nodal measures
     write_out_nodal_measures(nodal_dict, output_dir, corr_mat_file, cost)
+    
+    # Get the global measures
+    # (note that this takes a bit of time because you're generating random
+    # graphs)
+    R_list, R_nodal_partition_list = mkg.make_random_list(G, n_rand=n_rand)
+
+    global_dict = mkg.calculate_global_measures(G,
+                                                R_list=R_list,
+                                                nodal_partition=nodal_partition,
+                                                R_nodal_partition_list=R_nodal_partition_list)
 
     # Write out the global measures
-
+    write_out_global_measures(global_dict, output_dir, corr_mat_file, cost)
 
 
 if __name__ == "__main__":
@@ -180,6 +224,7 @@ if __name__ == "__main__":
                                       arg.centroids_file,
                                       arg.output_dir,
                                       cost=arg.cost,
+                                      n_rand=arg.n_rand,
                                       names_308_style=arg.names_308_style)
 
 #=============================================================================

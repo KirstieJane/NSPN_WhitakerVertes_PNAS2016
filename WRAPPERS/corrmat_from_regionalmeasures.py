@@ -43,8 +43,9 @@ def setup_argparser():
                             type=str,
                             metavar='regional_measures_file',
                             help=textwrap.dedent(('CSV file that contains regional values for each participant.\n')+
-                                                 ('Column labels should be the region names or covariate variable names.\n')+
-                                                 ('All participants in the file will be included in the correlation matrix.')))
+                                                 ('Column labels should be the region names or covariate variable\n')+
+                                                 ('names. All participants in the file will be included in the\n')+
+                                                 ('correlation matrix.')))
 
     parser.add_argument(dest='names_file',
                             type=str,
@@ -61,9 +62,10 @@ def setup_argparser():
     parser.add_argument('--covars_file',
                             type=str,
                             metavar='covars_file',
-                            help=textwrap.dedent(('Text file that contains the names of variables that should be covaried\n')+
-                                                 ('for each regional measure before the creation of the correlation matrix.\n')+
-                                                 ('One variable name on each line.')),
+                            help=textwrap.dedent(('Text file that contains the names of variables that should be\n')+
+                                                 ('covaried for each regional measure before the creation of the\n')+
+                                                 ('correlation matrix. One variable name on each line.\n')+
+                                                 ('  Default: None')),
                             default=None)
 
     parser.add_argument('--names_308_style',
@@ -71,7 +73,8 @@ def setup_argparser():
                             help=textwrap.dedent(('Include this flag if your names are in the NSPN 308\n')+
                                                  ('parcellation style (which means you have 41 subcortical regions)\n')+
                                                  ('that are still in the names files and that\n')+
-                                                 ('the names are in <hemi>_<DK-region>_<part> format')),
+                                                 ('the names are in <hemi>_<DK-region>_<part> format.\n')+
+                                                 ('  Default: False')),
                             default=False)
 
     arguments = parser.parse_args()

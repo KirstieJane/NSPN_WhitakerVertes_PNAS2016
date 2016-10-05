@@ -82,7 +82,8 @@ def setup_argparser():
                             help=textwrap.dedent(('Include this flag if your names are in the NSPN 308\n')+
                                                  ('parcellation style (which means you have 41 subcortical regions)\n')+
                                                  ('that are still in the names and centroids files and that\n')+
-                                                 ('the names are in <hemi>_<DK-region>_<part> format')),
+                                                 ('the names are in <hemi>_<DK-region>_<part> format.\n')+
+                                                 ('  Default: False')),
                             default=False)
 
     arguments = parser.parse_args()

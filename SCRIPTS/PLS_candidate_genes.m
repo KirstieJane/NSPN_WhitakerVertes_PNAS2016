@@ -1,3 +1,4 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This function performs permutation test for significance of up/down
 % weighting of candidate gene lists in a PLS component
 
@@ -6,11 +7,14 @@
 %fid2 is the candidate genes input file
 %fid3 is the name of the output file
 %ABSOLUTE is an option defining whether we use absolute values of z-scores
-%in permutation test. 
-%Use ABSOLUTE=true for schizophrenia gene set and ABSOLUTE=false for oligo gene set 
+%in permutation test.
+%Use ABSOLUTE=true for schizophrenia gene set and ABSOLUTE=false for oligo gene set
 
 %example:
 %PLS_candidate_genes('PLS2_geneWeights.csv','Candidate_genes_schizophrenia.csv','schizophrenia_pls2_stats.csv',true);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Created by Petra Vertes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function y = PLS_candidate_genes(fid1,fid2,fid3,ABSOLUTE)
 
@@ -29,7 +33,7 @@ clear ans
 
 PLS_Z=zscore(PLSweight);
 for i=1:length(cand)
-    CANDind(i)=find(PLSind==cand(i));  
+    CANDind(i)=find(PLSind==cand(i));
 end
 myZ=PLS_Z(CANDind);
 
@@ -49,11 +53,11 @@ for r=1:10000
     else
         R2=mean(myZr);
     end
-   
-    if R2>=R1   
+
+    if R2>=R1
     count=count+1;
     end
-    
+
     Rperm=[Rperm;R2];
 end
 
@@ -62,4 +66,3 @@ p=count/r;
 
 myoutput=[R;Rperm];
 csvwrite(fid3,myoutput);
-

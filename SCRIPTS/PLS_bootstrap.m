@@ -4,12 +4,14 @@ function PLS_bootstrap(response_var_file, predictor_var_file, output_dir)
 % Define the PLS bootstrap function with the following arguments
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% response_var_file ------ full path to the PLS_MRI_response_vars.csv file
-%%%                           that is created by the NSPN_CorticalMyelination 
+%%%                           that is created by the NSPN_CorticalMyelination
 %%%                           wrapper script
 %%% predictor_var_file ----- full path to the PLS_gene_predictor_vars.csv file
 %%%                           that is provided as raw data
-%%% output_dir ------------- where to save the PLS_geneWeights and PLS_ROIscores 
+%%% output_dir ------------- where to save the PLS_geneWeights and PLS_ROIscores
 %%%                           files (for PLS1 and PLS2 separately)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Created by Petra Vertes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 disp('Running PLS')
@@ -17,7 +19,7 @@ disp('Running PLS')
 %import response variables
 importdata(response_var_file);
 
-%unwrap and tidy MRI response variable names 
+%unwrap and tidy MRI response variable names
 ROIname=ans.textdata(:,1);
 ResponseVarNames=ans.textdata(1,:);
 ResponseVarNames=ans.textdata(1,2:4);
@@ -40,7 +42,7 @@ clear indata
 %number of bootstrap iterations
 bootnum=1000;
 
-%DO PLS in 2 dimensions (with 2 components) 
+%DO PLS in 2 dimensions (with 2 components)
 X=GENEdata';
 Y=zscore(MRIdata);
 dim=2;
@@ -82,20 +84,20 @@ for i=1:bootnum
     Xr=X(myresample,:); % define X for resampled regions
     Yr=Y(myresample,:); % define Y for resampled regions
     [XL,YL,XS,YS,BETA,PCTVAR,MSE,stats]=plsregress(Xr,Yr,dim); %perform PLS for resampled data
-    
+
     temp=stats.W(:,1);%extract PLS1 weights
-    newW=temp(x1); %order the newly obtained weights the same way as initial PLS 
+    newW=temp(x1); %order the newly obtained weights the same way as initial PLS
     if corr(PLS1w,newW)<0 % the sign of PLS components is arbitrary - make sure this aligns between runs
         newW=-1*newW;
     end
     PLS1weights=[PLS1weights,newW];%store (ordered) weights from this bootstrap run
-    
+
     temp=stats.W(:,2);%extract PLS2 weights
-    newW=temp(x2); %order the newly obtained weights the same way as initial PLS 
+    newW=temp(x2); %order the newly obtained weights the same way as initial PLS
     if corr(PLS2w,newW)<0 % the sign of PLS components is arbitrary - make sure this aligns between runs
         newW=-1*newW;
     end
-    PLS2weights=[PLS2weights,newW]; %store (ordered) weights from this bootstrap run    
+    PLS2weights=[PLS2weights,newW]; %store (ordered) weights from this bootstrap run
 end
 
 %get standard deviation of weights from bootstrap runs

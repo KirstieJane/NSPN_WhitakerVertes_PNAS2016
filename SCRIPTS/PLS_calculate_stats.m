@@ -4,11 +4,13 @@ function PLS_calculate_stats(response_var_file, predictor_var_file, output_dir)
 % Define the PLS calculate stats function with the following arguments
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% response_var_file ------ full path to the PLS_MRI_response_vars.csv file
-%%%                           that is created by the NSPN_CorticalMyelination 
+%%%                           that is created by the NSPN_CorticalMyelination
 %%%                           wrapper script
 %%% predictor_var_file ----- full path to the PLS_gene_predictor_vars.csv file
 %%%                           that is provided as raw data
 %%% output_dir ------------- where to save the PLS_stats file (for PLS1 and PLS2 together)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Created by Petra Vertes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 disp('Re-run PLS to get explained variance and associated stats')
@@ -16,7 +18,7 @@ disp('Re-run PLS to get explained variance and associated stats')
 %import response variables
 importdata(response_var_file);
 
-%unwrap and tidy MRI response variable names 
+%unwrap and tidy MRI response variable names
 ROIname=ans.textdata(:,1);
 ResponseVarNames=ans.textdata(1,:);
 ResponseVarNames=ans.textdata(1,2:4);
@@ -35,7 +37,7 @@ genes=indata.textdata;
 genes=genes(2:length(genes));
 clear indata
 
-%DO PLS in 2 dimensions (with 2 components) 
+%DO PLS in 2 dimensions (with 2 components)
 X=GENEdata';
 Y=zscore(MRIdata);
 dim=2;
@@ -57,7 +59,7 @@ end
 [R2,p2]=corr(XS(:,2),MRIdata);
 a=[R1',p1',R2',p2'];
 
- 
+
 %assess significance of PLS result
 for j=1:1000
     order=randperm(size(Y,1));
@@ -80,5 +82,3 @@ p=length(find(Rsq>=Rsquared))/j;
 %save stats
 myStats=[PCTVAR; p, j];
 csvwrite(fullfile(output_dir,'PLS_stats.csv'),myStats);
-
-
